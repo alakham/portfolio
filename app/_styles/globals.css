@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+}
+
+@layer base {
+  .h1 {
+    @apply text-[2.5rem] lg:text-[3.5rem] leading-[1.1] font-semibold;
+  }
+  .h2 {
+    @apply text-[1.80rem] lg:text-[2.80rem] leading-[1.1] font-semibold;
+  }
+  .h3 {
+    @apply text-[1rem] lg:text-[1.5rem] leading-[1.1] font-semibold;
+  }
+  .text-outline {
+    -webkit-text-stroke: 1px #e1e8ef;
+  }
+  .text-outline-hover {
+    -webkit-text-stroke: 1px #d2af84;
+  }
+}
+
+@layer components {
+  .spinner {
+    margin: 3.2rem auto 1.6rem;
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid theme("colors.primary.900");
+    border-right-color: theme("colors.primary.200");
+    animation: rotate 1s infinite linear;
+  }
+
+  .spinner-mini {
+    margin: 0;
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid theme("colors.primary.200");
+    border-right-color: transparent;
+    animation: rotate 1s infinite linear;
+  }
+
+  @keyframes rotate {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+}
+
+/* For data picker */
+
+/* .rdp {
+  --rdp-cell-size: 32px !important;
+  --rdp-accent-color: theme("colors.accent.500") !important;
+  --rdp-background-color: theme("colors.accent.600") !important;
+  margin: 0 !important;
+} */
+
+.rdp-root {
+  --rdp-day-height: 2rem !important; /* The height of the day cells. */
+  --rdp-day-width: 2rem !important; /* The width of the day cells. */
+  --rdp-accent-color: theme("colors.accent.500") !important;
+  --rdp-background-color: theme("colors.accent.600") !important;
+  --rdp-font-family: inherit !important;
+  --rdp-range_middle-background-color: theme(
+    "colors.accent.600"
+  ) !important; /* The color of the background for days in the middle of a range. */
+  margin: 0 !important;
+}
