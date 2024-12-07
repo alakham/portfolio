@@ -33,7 +33,7 @@ const services = [
 
 function Page() {
   return (
-    <section className="min-h-[80vh] flex flex-col items-center justify-center py-12 xl:py-0">
+    <section className=" flex flex-col items-center justify-center py-4 xl:py-0 mt-[2rem] lg:mt-[3rem] mx-3">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0 }}
@@ -47,7 +47,7 @@ function Page() {
             return (
               <div
                 key={index}
-                className="flex flex-col justify-center flex-1 gap-6 group"
+                className="flex flex-col justify-center flex-1 gap-6 group "
               >
                 <div className="flex items-center justify-between w-full">
                   <div className="text-5xl font-extrabold text-transparent transition-all duration-500 text-outline group-hover:text-outline-hover">

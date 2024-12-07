@@ -5,7 +5,7 @@ import Button from "./Button";
 
 function Header() {
   return (
-    <header className="px-4 py-2 border-b border-primary-900 md:px-8 md:py-3">
+    <header className="z-10 px-4 py-2 border-b border-primary-900 md:px-8 md:py-3">
       <div className="flex items-center justify-between mx-auto ">
         <h1>
           <Link className="text-3xl font-semibold" href="/">

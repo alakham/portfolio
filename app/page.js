@@ -13,7 +13,7 @@ export default function Page() {
         <div className="flex flex-col items-center justify-between gap-12 pt-6 xl:mt-20 xl:mb-8 xl:flex-row xl:items-center">
           <div className="order-2 text-center xl:text-left lg:order-none">
             <span className="text-xl">Software Developer</span>
-            <h1 className="h1">
+            <h1 className=" h1">
               Hello I&apos;m <br />
               <span className="text-accent-400 whitespace-nowrap">
                 Makha Diakhate

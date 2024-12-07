@@ -22,9 +22,7 @@ export default function RootLayout({ children }) {
       >
         <Header />
         <StairTransition />
-        <PageTransition className="w-full overflow-x-hidden">
-          {children}
-        </PageTransition>
+        <PageTransition className="w-full">{children}</PageTransition>
       </body>
     </html>
   );

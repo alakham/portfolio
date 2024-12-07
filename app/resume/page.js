@@ -20,11 +20,11 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
 
+// (Data remains the same)
 // about
 const aboutData = {
   title: "About me",
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   // Info
   infos: [
     {
@@ -62,8 +62,7 @@ const aboutData = {
 const experience = {
   icon: "badge",
   title: "My experience",
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   items: [
     {
       company: "Freelance",
@@ -92,8 +91,7 @@ const experience = {
 const education = {
   icon: "badge",
   title: "My education",
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   items: [
     {
       institution: "UDEMY (Online Course)",
@@ -116,8 +114,7 @@ const education = {
 // skills
 const skills = {
   title: "My Skills",
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
   skillsList: [
     {
       icon: <FaHtml5 />,
@@ -162,34 +159,34 @@ function Page() {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[80vh] flex justify-center items-center py-12 xl:py-0"
+      className="h-[90vh] flex justify-center items-center xl:py-0"
     >
-      <div className="container mx-auto">
+      <div className="container px-4 mx-auto">
         <Tabs
           defaultValue="Experience"
-          className="flex flex-col xl:flex-row gap-[4rem]"
+          className="flex flex-col h-screen gap-4 xl:gap-[3rem] xl:flex-row"
         >
-          <TabsList className="flex flex-col max-w-[20rem] mx-auto xl:mx-0 gap-6">
+          <TabsList className="flex flex-col  mx-auto xl:mx-0 gap-3 xl:gap-[1.75rem] mt-[4rem] xl:mt-0">
             <TabsTrigger value="experience">experience</TabsTrigger>
             <TabsTrigger value="education">education</TabsTrigger>
             <TabsTrigger value="skills">skills</TabsTrigger>
             <TabsTrigger value="about">about me</TabsTrigger>
           </TabsList>
-          <div className="w-full ">
+          <div className="w-full">
             {/* experience */}
             <TabsContent value="experience" className="w-full">
-              <div className="flex flex-col gap-[1.75rem] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{experience.title}</h3>
+              <div className="flex flex-col gap-3 text-center xl:text-left mt-[4rem]">
+                <h3 className="text-3xl font-bold">{experience.title}</h3>
                 <p className="max-w-[37rem] text-white/60 mx-auto xl:mx-0">
                   {experience.description}
                 </p>
-                <ScrollArea className="h-[25rem]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[2rem] mx-5">
+                <ScrollArea className="">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[2rem]">
                     {experience.items.map((item, index) => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#1B2631] h-[11.5] py-6 px-3 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="bg-[#1B2631] h-auto min-h-[8rem] py-6 px-3 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
                           <span className="text-accent-300">
                             {item.duration}
@@ -210,18 +207,18 @@ function Page() {
             </TabsContent>
             {/* education */}
             <TabsContent value="education" className="w-full">
-              <div className="flex flex-col gap-[1.75rem] text-center xl:text-left">
+              <div className="flex flex-col gap-[1rem] text-center xl:text-left mt-[4rem]">
                 <h3 className="text-4xl font-bold">{education.title}</h3>
-                <p className="max-w-[37rem] text-white/60 mx-auto xl:mx-0">
+                <p className="max-w-[40rem] text-white/60 mx-auto xl:mx-0">
                   {education.description}
                 </p>
-                <ScrollArea className="h-[25rem]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[2rem] mx-5">
+                <ScrollArea className="">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[2rem]">
                     {education.items.map((item, index) => {
                       return (
                         <li
                           key={index}
-                          className="bg-primary-900 h-[11.5] py-6 px-3 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="bg-primary-900 h-auto min-h-[8rem] py-6 px-3 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
                           <span className="text-accent-300">
                             {item.duration}
@@ -244,7 +241,7 @@ function Page() {
             {/* skills */}
             <TabsContent value="skills" className="w-full">
               <div className="flex flex-col gap-[2rem] mx-5 lg:mx-0">
-                <div className="flex flex-col gap-[2rem] text-center xl:text-left">
+                <div className="flex flex-col gap-[2rem] text-center xl:text-left mt-[4rem]">
                   <h3 className="text-4xl font-bold">{skills.title}</h3>
                   <p className="max-w-[48rem] text-white/60 mx-auto xl:mx-0">
                     {skills.description}
@@ -276,7 +273,7 @@ function Page() {
             {/* about */}
             <TabsContent
               value="about"
-              className="w-full text-center xl:text-left"
+              className="w-full text-center xl:text-left mt-[5rem]"
             >
               <div className="flex flex-col gap-[2rem]">
                 <h3 className="text-4xl font-bold">{aboutData.title}</h3>
@@ -284,12 +281,12 @@ function Page() {
                   {aboutData.description}
                 </p>
 
-                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 gaap-12 max-w-[40rem] mx-auto xl:mx-0">
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 gap-12 max-w-[40rem] mx-auto xl:mx-0">
                   {aboutData.infos.map((item, index) => {
                     return (
                       <li
                         key={index}
-                        className="flex items-center justify-center gap-4 xl:justify-start"
+                        className="flex items-center justify-center gap-[1.5rem] xl:justify-start"
                       >
                         <span className="text-white/60">{item.fieldName}</span>
                         <span className="text-lg">{item.fieldValue}</span>
