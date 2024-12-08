@@ -24,7 +24,8 @@ import { motion } from "framer-motion";
 // about
 const aboutData = {
   title: "About me",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  description:
+    "Passionate about creating impactful solutions, I specialize in delivering innovative and inclusive experiences.",
   // Info
   infos: [
     {
@@ -62,7 +63,8 @@ const aboutData = {
 const experience = {
   icon: "badge",
   title: "My experience",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  description:
+    "With a rich background in developing tailored solutions, I bring years of experience in building engaging and effective projects for diverse clients.",
   items: [
     {
       company: "Freelance",
@@ -91,7 +93,8 @@ const experience = {
 const education = {
   icon: "badge",
   title: "My education",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  description:
+    "I have continuously pursued education and development to enhance my technical skills and stay updated with industry trends. Here's a summary of my recent qualifications.",
   items: [
     {
       institution: "UDEMY (Online Course)",
@@ -114,7 +117,8 @@ const education = {
 // skills
 const skills = {
   title: "My Skills",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+  description:
+    "I am proficient in a wide range of technologies that empower me to build modern, responsive, and dynamic web applications. Below is a list of my key skills: ",
   skillsList: [
     {
       icon: <FaHtml5 />,

@@ -12,7 +12,9 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
+import { booking } from "@/lib/actions";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
@@ -35,6 +37,34 @@ const info = [
 ];
 
 function Page() {
+  // States for form inputs
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    service: "",
+    message: "",
+    service: "",
+  });
+
+  // Handle input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  // Handle select changes
+  const handleSelectChange = (value) => {
+    setFormData((prev) => ({
+      ...prev,
+      service: value,
+    }));
+  };
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -48,7 +78,12 @@ function Page() {
         <div className="flex flex-col lg:flex-row gap-[1.8rem] mx-2">
           {/* form */}
           <div className="xl:w-[58%] order-2 xl:order-none">
-            <form className="flex flex-col gap-6 p-8 bg-primary-800 rounded-xl">
+            <form
+              action={async (formData) => {
+                await booking(formData);
+              }}
+              className="flex flex-col gap-6 p-8 bg-primary-800 rounded-xl"
+            >
               <h3 className="text-3xl text-accent-400">
                 Let&apos;s work together
               </h3>
@@ -58,13 +93,40 @@ function Page() {
               </p>
               {/* input */}
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                <Input type="firstName" placeholder="Firstname" />
-                <Input type="lastName" placeholder="Lastname" />
-                <Input type="Email" placeholder="Email address" />
-                <Input type="Phone" placeholder="Phone number" />
+                <Input
+                  type="text"
+                  placeholder="Firstname"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                />
+                <Input
+                  type="text"
+                  placeholder="Lastname"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                />
+                <Input
+                  type="email"
+                  placeholder="Email Address"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+                <Input
+                  type="tel"
+                  placeholder="Phone Number"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                />
               </div>
               {/* select */}
-              <Select>
+              <Select
+                name="service"
+                onValueChange={(value) => handleSelectChange(value)}
+              >
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select a service" />
                 </SelectTrigger>
@@ -81,6 +143,10 @@ function Page() {
               <Textarea
                 className="h-[8rem]"
                 placeholder="Short description of your message"
+                type="textaera"
+                name="message"
+                value={formData.Textarea}
+                onChange={handleChange}
               />
               {/* Btn */}
               <Button size="md" className="max-w-40">
