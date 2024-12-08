@@ -65,6 +65,11 @@ function Page() {
     }));
   };
 
+  // Form submission
+  const handleSubmit = async (formData) => {
+    await booking(formData);
+  };
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -79,9 +84,7 @@ function Page() {
           {/* form */}
           <div className="xl:w-[58%] order-2 xl:order-none">
             <form
-              action={async (formData) => {
-                await booking(formData);
-              }}
+              action={handleSubmit}
               className="flex flex-col gap-6 p-8 bg-primary-800 rounded-xl"
             >
               <h3 className="text-3xl text-accent-400">
