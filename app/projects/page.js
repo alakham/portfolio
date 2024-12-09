@@ -178,7 +178,7 @@ function Page() {
               {/* button */}
               <div className="flex items-center gap-4">
                 {/* live project  button */}
-                <Link href={project.live}>
+                <Link href={project.live} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[3rem] h-[3rem] rounded-full flex justify-center items-center group bg-primary-800 ">
@@ -191,7 +191,7 @@ function Page() {
                   </TooltipProvider>
                 </Link>
                 {/* github project  button */}
-                <Link href={project.github}>
+                <Link href={project.github} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[3rem] h-[3rem] rounded-full flex justify-center items-center group bg-primary-800 ">
