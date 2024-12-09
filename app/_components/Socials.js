@@ -18,7 +18,12 @@ function Socials({ containerStyle, iconStyle }) {
     <div className={containerStyle}>
       {socials.map((social, index) => {
         return (
-          <Link key={index} href={social.path} className={iconStyle}>
+          <Link
+            key={index}
+            href={social.path}
+            className={iconStyle}
+            target="_blank"
+          >
             {social.icon}
           </Link>
         );
