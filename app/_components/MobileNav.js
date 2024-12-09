@@ -44,7 +44,7 @@ function MobileNav() {
         <CiMenuFries className="text-[2rem] text-primary-100" />
       </SheetTrigger>
       <SheetContent className="flex flex-col">
-        <div className="mt-20 text-2xl text-center mb-7">
+        <div className="mt-20 mb-8 text-2xl text-center">
           <Link href="/" className="text-3xl font-semibold">
             <h1>
               Makha <span className=" text-accent-300">.</span>

@@ -8,6 +8,11 @@ body {
   overflow-y: scroll;
 }
 
+.scrollable-container {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
