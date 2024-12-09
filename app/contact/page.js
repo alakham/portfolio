@@ -15,6 +15,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { booking } from "@/lib/actions";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
@@ -67,7 +68,14 @@ function Page() {
 
   // Form submission
   const handleSubmit = async (formData) => {
-    await booking(formData);
+    try {
+      await booking(formData);
+      toast.success(
+        "Thank you for your message! We will get back to you shortly."
+      );
+    } catch (error) {
+      toast.error("Failed to send the message. Please try again.");
+    }
   };
 
   return (
@@ -163,7 +171,7 @@ function Page() {
               {info.map((item, index) => {
                 return (
                   <li key={index} className="flex items-center gap-6">
-                    <div className="h-[2rem] w-[2rem] xl:w-[4rem] xl:h-[4rem] bg-primary-900 text-accent-400 rounded-md flex items-center justify-center">
+                    <div className="h-[3rem] w-[3rem] xl:w-[5rem] xl:h-[5rem] bg-primary-900 text-accent-400 rounded-md flex items-center justify-center">
                       <div className="text-[1.80rem]">{item.icon}</div>
                     </div>
                     <div className="flex-1">

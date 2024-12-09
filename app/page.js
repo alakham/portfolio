@@ -26,8 +26,14 @@ export default function Page() {
             </p>
             <div className="flex flex-col items-center gap-8 lg:flex-row">
               <Button>
-                <span> Download CV </span>
-                <FiDownload className="my-auto ml-1 " />
+                <a
+                  href="/assets/Makha_Diakhate.pdf"
+                  download="Makha Diakhate"
+                  className="flex items-center"
+                >
+                  <span>Download CV</span>
+                  <FiDownload className="my-auto ml-1" />
+                </a>
               </Button>
               <div className="mb-8 lg:mb-0">
                 <Socials

@@ -14,16 +14,18 @@ function Photo() {
         }}
         className="relative flex items-center justify-center"
       >
+        {/* Circle SVG and Image */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
             transition: { delay: 2, duration: 0.3, ease: "easeInOut" },
           }}
-          className="absolute flex items-center justify-center h-[18rem] w-[18rem] xl:h-[20rem] xl:w-[20rem] mix-blend-lighten"
+          className="relative flex items-center justify-center h-[18rem] w-[18rem] xl:h-[20rem] xl:w-[20rem] mix-blend-lighten"
         >
+          {/* Image placed in the center */}
           <Image
-            src="/tester.png"
+            src="/photo1.png"
             priority
             quality={100}
             fill
@@ -31,8 +33,10 @@ function Photo() {
             className="object-contain"
           />
         </motion.div>
+
+        {/* Circle border animation */}
         <motion.svg
-          className="w-[18rem] h-[18rem] xl:w-[20rem] xl:h-[20rem]"
+          className="absolute w-[18rem] h-[18rem] xl:w-[20rem] xl:h-[20rem]"
           fill="transparent"
           viewBox="0 0 506 506"
           xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +46,7 @@ function Photo() {
             cy="253"
             r="250"
             stroke="#D2AF84"
-            strokeWidth="3"
+            strokeWidth="4"
             strokeLinecap="round"
             strokeLinejoin="round"
             initial={{ strokeDasharray: "24 10 0 0" }}

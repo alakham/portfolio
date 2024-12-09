@@ -21,7 +21,7 @@ const projects = [
     category: "frontend",
     title: "krimo samb",
     description:
-      "ExperimentalWarning: CommonJS module  is loading ES Module  using require().",
+      "Explore the artistry of Krimo Samb at krimosamb.com. A portfolio of captivating photography that celebrates moments, emotions, and creativity.",
     stack: [
       {
         name: "html 5",
@@ -33,8 +33,8 @@ const projects = [
         name: "javascript",
       },
     ],
-    image: "",
-    live: "",
+    image: "/krimo.png",
+    live: "https://krimosamb.com",
     github: "",
   },
   {
@@ -42,7 +42,7 @@ const projects = [
     category: "frontend",
     title: "sakho consultancy",
     description:
-      "ExperimentalWarning: CommonJS module  is loading ES Module  using require().",
+      "Empowering organizations with authentic, inclusive strategies. Visit sakhoconsultancy.com to explore services in equity, diversity, and neurodiversity advocacy.",
     stack: [
       {
         name: "react.js",
@@ -54,8 +54,8 @@ const projects = [
         name: "styled component",
       },
     ],
-    image: "",
-    live: "",
+    image: "/maymouna.png",
+    live: "https://sakhoconsultancy.com",
     github: "",
   },
   {
@@ -63,7 +63,7 @@ const projects = [
     category: "frontend",
     title: "react fast food",
     description:
-      "ExperimentalWarning: CommonJS module  is loading ES Module  using require().",
+      "A dynamic React application that allows users to browse menus, customize orders, and seamlessly place fast food orders online. Designed for ease of use and optimized for a smooth ordering experience.",
     stack: [
       {
         name: "react js",
@@ -75,7 +75,7 @@ const projects = [
         name: "redux",
       },
     ],
-    image: "",
+    image: "/pizza.png",
     live: "",
     github: "",
   },
@@ -84,7 +84,7 @@ const projects = [
     category: "fullstack",
     title: "Oasis cabins management",
     description:
-      "ExperimentalWarning: CommonJS module  is loading ES Module  using require().",
+      "A full-stack application to manage cabin bookings, equipped with a modern user interface and backend services using Supabase.",
     stack: [
       {
         name: "react js",
@@ -99,7 +99,7 @@ const projects = [
         name: "supabase",
       },
     ],
-    image: "",
+    image: "/cabins.png",
     live: "",
     github: "",
   },
@@ -108,7 +108,7 @@ const projects = [
     category: "fullstack",
     title: "Oasis cabins website",
     description:
-      "ExperimentalWarning: CommonJS module  is loading ES Module  using require().",
+      "A beautiful, responsive website for Oasis Cabins, featuring booking integration and dynamic content powered by Next.js and Supabase.",
     stack: [
       {
         name: "next js",
@@ -120,7 +120,7 @@ const projects = [
         name: "supabase",
       },
     ],
-    image: "",
+    image: "/oasis.png",
     live: "",
     github: "",
   },
@@ -210,17 +210,17 @@ function Page() {
             <Swiper
               slidesPerView={1}
               spaceBetween={30}
-              className="mb-4 "
+              className="mb-4"
               onSlideChange={handleSlideChange}
             >
               {projects.map((item, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full">
-                    <div className="relative xl:h-[28rem] h-[15rem] flex items-center justify-center bg-primary-800">
+                    <div className=" xl:h-[28rem] h-[15rem] flex items-center justify-center bg-primary-800 w-full">
                       {/* overlay  */}
                       <div className="absolute top-0 bottom-0 z-10 w-full h-full bg-black/10"></div>
                       {/* image */}
-                      <div className="relative w-full">
+                      <div className="relative w-full h-full">
                         <Image
                           src={item.image}
                           alt={`Project ${item.num}`}

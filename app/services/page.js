@@ -21,9 +21,9 @@ const services = [
   },
   {
     num: "03",
-    title: "Logo Design",
+    title: "Web Maintenance & Support",
     description:
-      "Craft unique and memorable logos to represent your brand identity.",
+      "Keep your website running smoothly with regular maintenance, security updates, and technical support for long-term stability and performance",
     href: "",
   },
   {

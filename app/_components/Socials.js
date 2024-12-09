@@ -5,10 +5,12 @@ import { usePathname } from "next/navigation";
 import { FaGithub, FaFacebook, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 const socials = [
-  { icon: <FaLinkedinIn />, path: "/google.com" },
-  { icon: <FaGithub />, path: "/google.com" },
-  { icon: <FaTwitter />, path: "/google.com" },
-  { icon: <FaFacebook />, path: "/google.com" },
+  {
+    icon: <FaLinkedinIn />,
+    path: "https://www.linkedin.com/in/makha-diakhate-5aa702226/",
+  },
+  { icon: <FaGithub />, path: "https://github.com/alakham" },
+  { icon: <FaTwitter />, path: "https://x.com/citizen_221" },
 ];
 
 function Socials({ containerStyle, iconStyle }) {
