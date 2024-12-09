@@ -75,6 +75,16 @@ function Page() {
       );
     } catch (error) {
       toast.error("Failed to send the message. Please try again.");
+    } finally {
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        service: "",
+        message: "",
+        service: "",
+      });
     }
   };
 
@@ -144,9 +154,11 @@ function Page() {
                 <SelectContent>
                   <SelectGroup>
                     <SelectLabel>Select a service</SelectLabel>
-                    <SelectItem value="web">Web Developement</SelectItem>
-                    <SelectItem value="design">UI/UX Design</SelectItem>
-                    <SelectItem value="seo">SEO</SelectItem>
+                    <SelectItem value="Web Developement">
+                      Web Developement
+                    </SelectItem>
+                    <SelectItem value="UI/UX Design">UI/UX Design</SelectItem>
+                    <SelectItem value="SEO">SEO</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
