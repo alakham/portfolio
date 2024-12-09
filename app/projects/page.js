@@ -100,7 +100,7 @@ const projects = [
       },
     ],
     image: "/cabins.png",
-    live: "",
+    live: "https://wild-cabins.vercel.app/dashboard",
     github: "",
   },
   {
@@ -121,7 +121,7 @@ const projects = [
       },
     ],
     image: "/oasis.png",
-    live: "",
+    live: "https://oasis-camp.vercel.app/",
     github: "",
   },
   {
@@ -142,7 +142,7 @@ const projects = [
       },
     ],
     image: "/portfolio.png",
-    live: "",
+    live: "https://makha.vercel.app/",
     github: "",
   },
 ];
