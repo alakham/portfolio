@@ -84,7 +84,7 @@ const projects = [
     category: "fullstack",
     title: "Oasis cabins management",
     description:
-      "A full-stack application to manage cabin bookings, equipped with a modern user interface and backend services using Supabase.",
+      "A full-stack application to manage cabin bookings, equipped with a modern user interface.",
     stack: [
       {
         name: "react js",
@@ -108,7 +108,7 @@ const projects = [
     category: "fullstack",
     title: "Oasis cabins website",
     description:
-      "A beautiful, responsive website for Oasis Cabins, featuring booking integration and dynamic content powered by Next.js and Supabase.",
+      "A beautiful, responsive website for Oasis Cabins, featuring booking integration and dynamic content.",
     stack: [
       {
         name: "next js",
@@ -121,6 +121,27 @@ const projects = [
       },
     ],
     image: "/oasis.png",
+    live: "",
+    github: "",
+  },
+  {
+    num: "06",
+    category: "fullstack",
+    title: "My portfolio",
+    description:
+      "A modern, responsive portfolio showcasing my skills in web development, featuring and interactive projects.",
+    stack: [
+      {
+        name: "next js",
+      },
+      {
+        name: "tailwind.css",
+      },
+      {
+        name: "chadcn",
+      },
+    ],
+    image: "/portfolio.png",
     live: "",
     github: "",
   },
