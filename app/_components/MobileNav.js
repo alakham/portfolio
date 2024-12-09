@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci";
@@ -30,9 +31,15 @@ const links = [
 ];
 
 function MobileNav() {
+  const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
+
   return (
-    <Sheet>
+    <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger className="flex items-center justify-center overflow-y-auto">
         <CiMenuFries className="text-[2rem] text-primary-100" />
       </SheetTrigger>
@@ -45,11 +52,11 @@ function MobileNav() {
           </Link>
         </div>
         <nav className="flex flex-col items-center justify-center gap-4">
-          {" "}
           {links.map((link, index) => (
             <Link
               href={link.path}
               key={index}
+              onClick={handleLinkClick} // Close the menu on link click
               className={`${
                 link.path === pathname
                   ? "text-accent-400 border-b-accent-400 border-b-2 block"
@@ -59,9 +66,6 @@ function MobileNav() {
               {link.name}
             </Link>
           ))}
-          <Link href="/contact">
-            <Button>Hire me</Button>
-          </Link>
         </nav>
       </SheetContent>
     </Sheet>

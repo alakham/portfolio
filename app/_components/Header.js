@@ -15,9 +15,9 @@ function Header() {
         {/* desktop nav */}
         <div className="items-center hidden gap-8 lg:flex">
           <Navigation />
-          <Link href="/contact">
+          {/* <Link href="/contact">
             <Button>Hire me</Button>
-          </Link>
+          </Link> */}
         </div>
         {/* mobile nav */}
         <div className="lg:hidden">
