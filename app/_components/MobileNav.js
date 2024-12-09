@@ -44,8 +44,8 @@ function MobileNav() {
         <CiMenuFries className="text-[2rem] text-primary-100" />
       </SheetTrigger>
       <SheetContent className="flex flex-col">
-        <div className="mt-32 mb-10 text-2xl text-center">
-          <Link href="/" className="text-4xl font-semibold">
+        <div className="mt-20 text-2xl text-center mb-7">
+          <Link href="/" className="text-3xl font-semibold">
             <h1>
               Makha <span className=" text-accent-300">.</span>
             </h1>
@@ -56,12 +56,12 @@ function MobileNav() {
             <Link
               href={link.path}
               key={index}
-              onClick={handleLinkClick} // Close the menu on link click
+              onClick={handleLinkClick}
               className={`${
                 link.path === pathname
                   ? "text-accent-400 border-b-accent-400 border-b-2 block"
                   : ""
-              } capitalize font-medium transition-all hover:text-accent-400 text-lg`}
+              } capitalize font-medium transition-all duration-300 hover:text-accent-400 text-lg`}
             >
               {link.name}
             </Link>
