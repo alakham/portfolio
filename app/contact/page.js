@@ -109,8 +109,8 @@ function Page() {
                 Let&apos;s work together
               </h3>
               <p className="text-white/60">
-                Vous pouvez adapter cette approche à d&apos;autres breakpoints
-                si vous souhaitez que l&apos;élément devienne absolu{" "}
+                Explore opportunities to collaborate and create impactful web
+                solutions. Let&apos;s build something amazing together.
               </p>
               {/* input */}
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
