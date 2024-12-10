@@ -30,10 +30,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Head>
         <title>{dynamicTitle}</title>
-        <meta
-          name="google-site-verification"
-          content="3H_jq9pEUwrtqDqZDoI_b_XRYS--VbIzGEJxA3xrmP8"
-        />
+
         <meta
           name="description"
           content="Web development, UI/UX design, and SEO expertise by Makha Diakhate. Helping brands grow with custom solutions."
@@ -67,6 +64,10 @@ export default function RootLayout({ children }) {
         <meta
           name="twitter:image"
           content="https://www.makhadiakhate.com/twitter-card-image.jpg"
+        />
+        <meta
+          name="google-site-verification"
+          content="3H_jq9pEUwrtqDqZDoI_b_XRYS--VbIzGEJxA3xrmP8"
         />
       </Head>
 
