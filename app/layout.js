@@ -31,6 +31,10 @@ export default function RootLayout({ children }) {
       <Head>
         <title>{dynamicTitle}</title>
         <meta
+          name="google-site-verification"
+          content="68_beYOgY0dVQCtirRmXjHgS7HUqkja-q8qpi-sG5jE"
+        />
+        <meta
           name="description"
           content="Web development, UI/UX design, and SEO expertise by Makha Diakhate. Helping brands grow with custom solutions."
         />
