@@ -1,51 +1,68 @@
+"use client";
 import { Josefin_Sans } from "next/font/google";
 import Header from "./_components/Header";
 import "@/app/_styles/globals.css";
 import PageTransition from "./_components/PageTransition";
 import StairTransition from "./_components/StairTransition";
 import { Toaster } from "react-hot-toast";
+import { usePathname } from "next/navigation";
 
 const Josefin = Josefin_Sans({
   subsets: ["latin"],
   display: "swap",
 });
 
-export const metadata = {
-  title: "Makha Diakhate | Web Developer",
-  description:
-    "Web development, UI/UX design, and SEO expertise by Makha Diakhate. Helping brands grow with custom solutions.",
-  keywords:
-    "web development, UI/UX design, SEO, frontend development, Makha Diakhate",
-  openGraph: {
-    title: "Makha Diakhate | Web Developer",
-    description:
-      "Explore web development services, UI/UX design, and SEO solutions by Makha Diakhate.",
-    url: "https://makha.vercel.app/",
-    siteName: "Makha Diakhate",
-    images: [
-      {
-        url: "https://makha.vercel.app/og-image.jpg", // Replace with your own image
-        width: 1200,
-        height: 630,
-        alt: "Makha Diakhate Web Developer",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Makha Diakhate | Web Developer",
-    description:
-      "Professional web development and UI/UX design services by Makha Diakhate.",
-    image: "https://www.makhadiakhate.com/twitter-card-image.jpg", // Replace with your own image
-  },
-  robots: "index, follow",
-  author: "Makha Diakhate",
-  viewport: "width=device-width, initial-scale=1.0",
+const pageTitles = {
+  "/": "Home - Welcome to My Website",
+  "/services": "Services - Explore Our Services",
+  "/resume": "Resume - My Professional Journey",
+  "/projects": "Projects - Explore My Work",
+  "/contact": "Contact - Get in Touch",
 };
 
 export default function RootLayout({ children }) {
+  const pathname = usePathname();
+  const dynamicTitle = pageTitles[pathname] || "Makha Diakhate | Web Developer";
+
   return (
     <html lang="en">
+      <head>
+        <title>{dynamicTitle}</title>
+        <meta
+          name="description"
+          content="Web development, UI/UX design, and SEO expertise by Makha Diakhate. Helping brands grow with custom solutions."
+        />
+        <meta
+          name="keywords"
+          content="web development, UI/UX design, SEO, frontend development, Makha Diakhate"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Makha Diakhate" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {/* Open Graph */}
+        <meta property="og:title" content="Makha Diakhate | Web Developer" />
+        <meta
+          property="og:description"
+          content="Explore web development services, UI/UX design, and SEO solutions by Makha Diakhate."
+        />
+        <meta property="og:url" content="https://makha.vercel.app/" />
+        <meta property="og:site_name" content="Makha Diakhate" />
+        <meta
+          property="og:image"
+          content="https://makha.vercel.app/og-image.jpg"
+        />
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Makha Diakhate | Web Developer" />
+        <meta
+          name="twitter:description"
+          content="Professional web development and UI/UX design services by Makha Diakhate."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.makhadiakhate.com/twitter-card-image.jpg"
+        />
+      </head>
       <body
         className={`${Josefin.className} h-screen bg-primary-950 text-primary-100 flex flex-col antialiased`}
       >
