@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
         <title>{dynamicTitle}</title>
         <meta
           name="google-site-verification"
-          content="68_beYOgY0dVQCtirRmXjHgS7HUqkja-q8qpi-sG5jE"
+          content="3H_jq9pEUwrtqDqZDoI_b_XRYS--VbIzGEJxA3xrmP8"
         />
         <meta
           name="description"
