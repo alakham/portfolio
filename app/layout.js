@@ -6,6 +6,8 @@ import PageTransition from "./_components/PageTransition";
 import StairTransition from "./_components/StairTransition";
 import { Toaster } from "react-hot-toast";
 import { usePathname } from "next/navigation";
+import Head from "next/head";
+import Script from "next/script";
 
 const Josefin = Josefin_Sans({
   subsets: ["latin"],
@@ -26,7 +28,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <head>
+      <Head>
         <title>{dynamicTitle}</title>
         <meta
           name="description"
@@ -62,7 +64,22 @@ export default function RootLayout({ children }) {
           name="twitter:image"
           content="https://www.makhadiakhate.com/twitter-card-image.jpg"
         />
-      </head>
+      </Head>
+
+      {/* Google Tag Manager Script */}
+      <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-F2MBJF124J"
+      />
+      <Script id="google-analytics-script" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-F2MBJF124J');
+        `}
+      </Script>
+
       <body
         className={`${Josefin.className} h-screen bg-primary-950 text-primary-100 flex flex-col antialiased`}
       >
