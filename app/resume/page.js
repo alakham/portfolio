@@ -172,7 +172,7 @@ function Page() {
           opacity: 1,
           transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
         }}
-        className="h-[90vh] flex justify-center items-center xl:py-0"
+        className="flex items-center justify-center "
       >
         <div className="container px-4 mx-auto">
           <Tabs
