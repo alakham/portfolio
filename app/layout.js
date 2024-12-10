@@ -17,10 +17,10 @@ const Josefin = Josefin_Sans({
 
 const pageTitles = {
   "/": "Home - Welcome to My Website",
-  "/services": "Services - Explore Our Services",
-  "/resume": "Resume - My Professional Journey",
-  "/projects": "Projects - Explore My Work",
-  "/contact": "Contact - Get in Touch",
+  "/services": "Services ",
+  "/resume": "Resume",
+  "/projects": "Projects",
+  "/contact": "Get in Touch",
 };
 
 export default function RootLayout({ children }) {
