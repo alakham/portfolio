@@ -8,6 +8,7 @@ import { Toaster } from "react-hot-toast";
 import { usePathname } from "next/navigation";
 import Head from "next/head";
 import Script from "next/script";
+import { useEffect } from "react";
 
 const Josefin = Josefin_Sans({
   subsets: ["latin"],
@@ -24,7 +25,19 @@ const pageTitles = {
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
-  const dynamicTitle = pageTitles[pathname] || "Makha Diakhate | Web Developer";
+
+  // Ensure we add the leading slash if necessary
+  const formattedPath =
+    pathname === "/" ? pathname : `/${pathname.replace(/^\/+/, "")}`;
+
+  // Dynamically set the title
+  const dynamicTitle = pageTitles[formattedPath]
+    ? `Makha Diakhate | ${pageTitles[formattedPath]}`
+    : "Makha Diakhate | Web Developer";
+
+  useEffect(() => {
+    document.title = dynamicTitle;
+  }, [dynamicTitle]);
 
   return (
     <html lang="en">
