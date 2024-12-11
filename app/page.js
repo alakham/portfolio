@@ -11,14 +11,14 @@ export default function Page() {
   return (
     <>
       <Head>
-        <title> Services</title>
+        <title>Home</title>
         <meta
           name="Contact"
           content="Welcome to my website! Discover my expertise, services, and latest projects."
         />
       </Head>
 
-      <section className="h-auto">
+      <section className="h-auto p-4">
         <div className="flex items-center justify-center w-full">
           <div className="flex flex-col items-center justify-between gap-12 pt-6 xl:mt-20 xl:mb-8 xl:flex-row xl:items-center">
             <div className="order-2 text-center xl:text-left lg:order-none">
@@ -59,7 +59,7 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="flex items-center justify-center w-full mt-10">
+        <div className="flex items-center justify-center w-full mt-7">
           <Stats />
         </div>
       </section>
