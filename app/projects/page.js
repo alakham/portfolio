@@ -191,10 +191,13 @@ function Page() {
                 {/* project description */}
                 <p className="text-white/60">{project.description}</p>
                 {/* stacks */}
-                <ul className="flex ga-4">
+                <ul className="flex">
                   {project.stack.map((item, index) => {
                     return (
-                      <li key={index} className="text-xl text-accent-400">
+                      <li
+                        key={index}
+                        className="text-base md:text-xl text-accent-400 whitespace-nowrap"
+                      >
                         {item.name}
                         {index !== project.stack.length - 1 && (
                           <span>,&nbsp;</span>
@@ -206,7 +209,7 @@ function Page() {
                 {/* border */}
                 <div className="border border-white/30"></div>
                 {/* button */}
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 mb-2">
                   {/* live project  button */}
                   <Link href={project.live} target="_blank">
                     <TooltipProvider delayDuration={100}>
