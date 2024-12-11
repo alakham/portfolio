@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 function PageTransition({ children }) {
   const pathname = usePathname();
   return (
-    <AnimatePresence>
+    <AnimatePresence className="fixed pointer-events-none">
       <div key={pathname}>
         <motion.div
           initial={{ opacity: 1 }}

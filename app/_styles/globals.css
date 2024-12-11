@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  overflow-x: hidden;
-  overflow-y: auto;
-  height: 100%;
-}
-
 @layer base {
   .h1 {
     @apply text-[2.5rem] lg:text-[3.5rem] leading-[1.1] font-semibold;
@@ -24,6 +17,24 @@ body {
   }
   .text-outline-hover {
     -webkit-text-stroke: 1px #d2af84;
+  }
+
+  ::-webkit-scrollbar {
+    width: 2px;
+    height: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #d4af37;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b5962f;
   }
 }
 
@@ -55,23 +66,12 @@ body {
   }
 }
 
-/* For data picker */
-
-/* .rdp {
-  --rdp-cell-size: 32px !important;
-  --rdp-accent-color: theme("colors.accent.500") !important;
-  --rdp-background-color: theme("colors.accent.600") !important;
-  margin: 0 !important;
-} */
-
 .rdp-root {
-  --rdp-day-height: 2rem !important; /* The height of the day cells. */
-  --rdp-day-width: 2rem !important; /* The width of the day cells. */
+  --rdp-day-height: 2rem !important;
+  --rdp-day-width: 2rem !important;
   --rdp-accent-color: theme("colors.accent.500") !important;
   --rdp-background-color: theme("colors.accent.600") !important;
   --rdp-font-family: inherit !important;
-  --rdp-range_middle-background-color: theme(
-    "colors.accent.600"
-  ) !important; /* The color of the background for days in the middle of a range. */
+  --rdp-range_middle-background-color: theme("colors.accent.600") !important;
   margin: 0 !important;
 }

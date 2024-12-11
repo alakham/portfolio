@@ -174,7 +174,7 @@ function Page() {
         }}
         className="flex items-center justify-center "
       >
-        <div className="container p-4 mx-auto">
+        <div className="container mx-auto">
           <Tabs
             defaultValue="Experience"
             className="flex flex-col  gap-4 xl:gap-[3rem] xl:flex-row"
@@ -220,7 +220,7 @@ function Page() {
               </TabsContent>
               {/* education */}
               <TabsContent value="education" className="w-full">
-                <div className="flex flex-col gap-[1rem] text-center xl:text-left mt-[4rem]">
+                <div className="flex flex-col  gap-[1rem] text-center xl:text-left mt-[4rem]">
                   <h3 className="text-4xl font-bold">{education.title}</h3>
                   <p className="max-w-[40rem] text-white/60 mx-auto xl:mx-0">
                     {education.description}
@@ -262,26 +262,25 @@ function Page() {
                       {skills.description}
                     </p>
                   </div>
-                  <div className="relative max-h-[23rem] overflow-y-auto">
-                    <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[2rem] gap-4">
-                      {skills.skillsList.map((skill, index) => (
-                        <li key={index}>
-                          <TooltipProvider delayDuration={100}>
-                            <Tooltip>
-                              <TooltipTrigger className="w-full bg-primary-900 h-[8rem] rounded-xl flex justify-center items-center group">
-                                <div className="text-6xl transition-all duration-300 group-hover:text-accent-400">
-                                  {skill.icon}
-                                </div>
-                              </TooltipTrigger>
-                              <TooltipContent>
-                                <p className="capitalize">{skill.name}</p>
-                              </TooltipContent>
-                            </Tooltip>
-                          </TooltipProvider>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+
+                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[2rem] gap-4">
+                    {skills.skillsList.map((skill, index) => (
+                      <li key={index}>
+                        <TooltipProvider delayDuration={100}>
+                          <Tooltip>
+                            <TooltipTrigger className="w-full bg-primary-900 h-[8rem] rounded-xl flex justify-center items-center group">
+                              <div className="text-6xl transition-all duration-300 group-hover:text-accent-400">
+                                {skill.icon}
+                              </div>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p className="capitalize">{skill.name}</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </TabsContent>
 

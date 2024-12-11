@@ -103,7 +103,9 @@ export default function RootLayout({ children }) {
       >
         <Header />
         <StairTransition />
-        <PageTransition className="w-full">{children}</PageTransition>
+        <PageTransition className="w-full ">
+          {children}
+        </PageTransition>
         <Toaster
           position="top-center"
           gutter={12}
