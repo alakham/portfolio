@@ -120,7 +120,7 @@ function Page() {
                 </h3>
                 <p className="text-white/60">
                   Explore opportunities to collaborate and create impactful web
-                  solutions. Let&apos;s build something amazing together.
+                  solutions. Let&apos;s build something amazing together!
                 </p>
                 {/* input */}
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -174,7 +174,7 @@ function Page() {
                 </Select>
                 {/* textarea */}
                 <Textarea
-                  className="h-[8rem]"
+                  className="max-h-[8rem]"
                   placeholder="Short description of your message"
                   type="textaera"
                   name="message"
