@@ -17,7 +17,7 @@ const Josefin = Josefin_Sans({
 
 const pageTitles = {
   "/": "Home - Welcome to My Website",
-  "/services": "Services ",
+  "/services": "Services",
   "/resume": "Resume",
   "/projects": "Projects",
   "/contact": "Get in Touch",
@@ -26,14 +26,15 @@ const pageTitles = {
 export default function RootLayout({ children }) {
   const pathname = usePathname();
 
-  // Ensure we add the leading slash if necessary
   const formattedPath =
     pathname === "/" ? pathname : `/${pathname.replace(/^\/+/, "")}`;
 
-  // Dynamically set the title
   const dynamicTitle = pageTitles[formattedPath]
     ? `Makha Diakhate | ${pageTitles[formattedPath]}`
     : "Makha Diakhate | Web Developer";
+
+  const dynamicDescription =
+    "Explore professional web development, UI/UX design, and SEO solutions with Makha Diakhate.";
 
   useEffect(() => {
     document.title = dynamicTitle;
@@ -43,11 +44,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Head>
         <title>{dynamicTitle}</title>
-
-        <meta
-          name="description"
-          content="Web development, UI/UX design, and SEO expertise by Makha Diakhate. Helping brands grow with custom solutions."
-        />
+        <meta name="description" content={dynamicDescription} />
         <meta
           name="keywords"
           content="web development, UI/UX design, SEO, frontend development, Makha Diakhate"
@@ -55,33 +52,51 @@ export default function RootLayout({ children }) {
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Makha Diakhate" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        {/* Open Graph */}
-        <meta property="og:title" content="Makha Diakhate | Web Developer" />
-        <meta
-          property="og:description"
-          content="Explore web development services, UI/UX design, and SEO solutions by Makha Diakhate."
-        />
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={dynamicTitle} />
+        <meta property="og:description" content={dynamicDescription} />
         <meta property="og:url" content="https://makha.vercel.app/" />
         <meta property="og:site_name" content="Makha Diakhate" />
         <meta
           property="og:image"
           content="https://makha.vercel.app/og-image.jpg"
         />
-        {/* Twitter */}
+
+        {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Makha Diakhate | Web Developer" />
-        <meta
-          name="twitter:description"
-          content="Professional web development and UI/UX design services by Makha Diakhate."
-        />
+        <meta name="twitter:title" content={dynamicTitle} />
+        <meta name="twitter:description" content={dynamicDescription} />
         <meta
           name="twitter:image"
-          content="https://www.makhadiakhate.com/twitter-card-image.jpg"
+          content="https://makha.vercel.app/og-image.jpg"
         />
-        <meta
-          name="google-site-verification"
-          content="3H_jq9pEUwrtqDqZDoI_b_XRYS--VbIzGEJxA3xrmP8"
-        />
+
+        {/* SEO Meta Tag: JSON-LD Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Makha Diakhate",
+            url: "https://makha.vercel.app/",
+            description: dynamicDescription,
+            author: {
+              "@type": "Person",
+              name: "Makha Diakhate",
+            },
+            potentialAction: {
+              "@type": "SearchAction",
+              target: "https://makha.vercel.app/?q={search_term}",
+              "query-input": "required name=search_term",
+            },
+          })}
+        </script>
+
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
       </Head>
 
       {/* Google Tag Manager Script */}
@@ -103,9 +118,7 @@ export default function RootLayout({ children }) {
       >
         <Header />
         <StairTransition />
-        <PageTransition className="w-full ">
-          {children}
-        </PageTransition>
+        <PageTransition className="w-full">{children}</PageTransition>
         <Toaster
           position="top-center"
           gutter={12}
