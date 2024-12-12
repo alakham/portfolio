@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 @layer base {
   .h1 {
     @apply text-[2.5rem] lg:text-[3.5rem] leading-[1.1] font-semibold;
