@@ -176,7 +176,7 @@ function Page() {
       >
         <div className="container mx-auto">
           <Tabs
-            defaultValue="Experience"
+            defaultValue="experience"
             className="flex flex-col  gap-4 xl:gap-[3rem] xl:flex-row"
           >
             <TabsList className="flex flex-col  mx-auto xl:mx-0 gap-3 xl:gap-[1.75rem] mt-[4rem] xl:mt-0">
