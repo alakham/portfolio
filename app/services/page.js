@@ -47,7 +47,7 @@ function Page() {
         />
       </Head>
 
-      <section className=" flex flex-col items-center justify-center py-4 xl:py-0 mt-[2rem] lg:mt-[3rem] mx-3">
+      <section className=" flex flex-col items-center justify-center py-4 xl:py-0 mt-[3rem] lg:mt-[4rem] mx-3">
         <div className="container mx-auto">
           <motion.div
             initial={{ opacity: 0 }}

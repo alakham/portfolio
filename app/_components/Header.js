@@ -5,8 +5,8 @@ import Button from "./Button";
 
 function Header() {
   return (
-    <header className="z-10 px-4 py-2 border-b border-primary-900 md:px-8 md:py-3">
-      <div className="flex items-center justify-between mx-auto ">
+    <header className="fixed z-10 w-full px-4 py-2 border-b bg-primary-950 border-primary-900 md:px-8 md:py-3">
+      <div className="flex items-center justify-between mx-auto">
         <h1>
           <Link className="text-3xl font-semibold" href="/">
             Makha<span className="text-accent-600">.</span>

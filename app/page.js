@@ -18,7 +18,7 @@ export default function Page() {
         />
       </Head>
 
-      <section className="h-auto">
+      <section className="h-auto mt-10 lg:mt-0">
         <div className="flex items-center justify-center w-full">
           <div className="flex flex-col items-center justify-between gap-12 pt-6 xl:mt-20 xl:mb-8 xl:flex-row xl:items-center">
             <div className="order-2 text-center xl:text-left lg:order-none">

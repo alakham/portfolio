@@ -176,7 +176,7 @@ function Page() {
         }}
         className="flex flex-col justify-center my-2 lg:my-0"
       >
-        <div className="container mx-auto mt-[2rem] xl:mt-0">
+        <div className="container mx-auto mt-[3rem] xl:mt-0">
           <div className="flex flex-col items-center justify-center xl:gap-[2rem] xl:flex-row mx-4">
             <div className="w-full xl:w-[50%] flex flex-col  xl:justify-between order-2 xl:order-none">
               <div className="flex flex-col gap-[2rem] h-[50%]">

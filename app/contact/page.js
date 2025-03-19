@@ -107,7 +107,7 @@ function Page() {
         }}
         className="py-6"
       >
-        <div className="container mx-auto">
+        <div className="container mx-auto mt-10 lg:mt-0">
           <div className="flex flex-col lg:flex-row gap-[1rem] mx-2">
             {/* form */}
             <div className="xl:w-[58%] order-2 xl:order-none">
