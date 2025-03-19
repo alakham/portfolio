@@ -7,6 +7,7 @@ import {
   SiStyledcomponents,
   SiRedux,
 } from "react-icons/si";
+import { BiLogoTypescript } from "react-icons/bi";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -99,6 +100,11 @@ const education = {
   items: [
     {
       institution: "UDEMY (Online Course)",
+      degree: "TypeSript Certifications",
+      duration: "2025",
+    },
+    {
+      institution: "UDEMY (Online Course)",
       degree: "React & Next.js Certifications",
       duration: "2024",
     },
@@ -136,6 +142,10 @@ const skills = {
     {
       icon: <FaReact />,
       name: "react.js",
+    },
+    {
+      icon: <BiLogoTypescript />,
+      name: "TypeSript",
     },
     {
       icon: <SiNextdotjs />,
