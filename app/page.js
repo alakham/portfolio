@@ -37,7 +37,7 @@ export default function Page() {
               <div className="flex flex-col items-center gap-8 lg:flex-row">
                 <Button>
                   <a
-                    href="/assets/Makha_Diakhate.pdf"
+                    href="/assets/Makha Diakhate.pdf"
                     download="Makha Diakhate"
                     className="flex items-center"
                   >

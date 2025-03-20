@@ -100,22 +100,22 @@ const education = {
   items: [
     {
       institution: "UDEMY (Online Course)",
-      degree: "TypeSript Certifications",
+      degree: "TypeSript Certification",
       duration: "2025",
     },
     {
       institution: "UDEMY (Online Course)",
-      degree: "React & Next.js Certifications",
+      degree: "React & Next.js Certification",
       duration: "2024",
     },
     {
       institution: "UDEMY (Online Course)",
-      degree: "JavaScript Certificationsr",
+      degree: "JavaScript Certification",
       duration: "2024",
     },
     {
       institution: "GOMYCODE (Online Course)",
-      degree: "Web Development Certification",
+      degree: "Introduction to Web Development Certification",
       duration: "2023",
     },
   ],
@@ -184,7 +184,7 @@ function Page() {
         }}
         className="flex items-center justify-center "
       >
-        <div className="container mx-auto">
+        <div className="container py-2 mx-auto">
           <Tabs
             defaultValue="experience"
             className="flex flex-col  gap-4 xl:gap-[3rem] xl:flex-row"
