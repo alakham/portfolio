@@ -6,6 +6,7 @@ import Socials from "./_components/Socials";
 import Photo from "./_components/Photo";
 import Stats from "./_components/Stats";
 import Head from "next/head";
+import LinkedInBadge from "./_components/LinkedInBadge";
 
 export default function Page() {
   return (
@@ -55,6 +56,7 @@ export default function Page() {
             </div>
             <div className="flex items-center justify-center order-1 xl:order-none">
               <Photo />
+              {/* <LinkedInBadge /> */}
             </div>
           </div>
         </div>
